@@ -75,7 +75,18 @@ export default function Loader3D() {
         };
     }, []);
 
+    useEffect(() => {
+        if (progress >= 100) {
+            // Un petit délai pour laisser l'animation de fin se faire
+            const timer = setTimeout(() => {
+                // On laisse page.tsx gérer la suite via le timer global
+            }, 500);
+            return () => clearTimeout(timer);
+        }
+    }, [progress]);
+
     if (!mounted) return null;
+
 
     return (
         <motion.div
@@ -136,6 +147,18 @@ export default function Loader3D() {
                 </div>
             </div>
 
+            <div className="absolute top-8 right-8 z-20">
+                <motion.button
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                    onClick={() => setProgress(100)}
+                    className="px-4 py-2 text-xs font-mono text-zinc-500 border border-zinc-800 rounded-full hover:bg-zinc-900 transition-colors uppercase tracking-widest"
+                >
+                    Passer l'animation
+                </motion.button>
+            </div>
+
             {/* Background elements */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-10">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 blur-[150px] rounded-full animate-pulse" />
@@ -144,3 +167,4 @@ export default function Loader3D() {
         </motion.div>
     );
 }
+

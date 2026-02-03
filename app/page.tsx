@@ -56,12 +56,12 @@ export default function Home() {
       try {
         sessionStorage.setItem("portfolio-loaded", "true");
       } catch (e) { }
-    }, 3000);
+    }, 4000); // 4 secondes max pour le loader
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (!hasCheckedVisit) return <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950" />;
+  if (!hasCheckedVisit) return <div className="h-[100dvh] bg-zinc-50 dark:bg-zinc-950" />;
 
   return (
     <>
@@ -69,7 +69,7 @@ export default function Home() {
         {loading && <Loader3D key="loader" />}
       </AnimatePresence>
 
-      <main className={`bg-zinc-50 dark:bg-zinc-950 min-h-screen text-zinc-900 dark:text-zinc-100 transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+      <main className={`bg-zinc-50 dark:bg-zinc-950 min-h-[100dvh] text-zinc-900 dark:text-zinc-100 transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
         <Navbar />
 
         {/* --- HERO SECTION --- */}

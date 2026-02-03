@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-black py-20 px-6">
+    <div className="min-h-dvh bg-zinc-50 dark:bg-black py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-16 text-center">

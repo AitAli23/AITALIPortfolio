@@ -26,7 +26,7 @@ export default async function ProjectPage({ params }: PageProps) {
     }
 
     return (
-        <main className="relative min-h-screen text-zinc-900 dark:text-zinc-100 pt-24 pb-20 overflow-hidden">
+        <main className="relative min-h-dvh text-zinc-900 dark:text-zinc-100 pt-24 pb-20 overflow-hidden">
             <ProjectBackground3D />
             <div className="container mx-auto px-4 max-w-5xl relative z-10">
                 {/* Back Button */}
