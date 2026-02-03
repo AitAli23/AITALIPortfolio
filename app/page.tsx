@@ -34,7 +34,14 @@ export default function Home() {
 
   useEffect(() => {
     // Vérifier si le loader a déjà été affiché dans cette session
-    const hasLoaded = sessionStorage.getItem("portfolio-loaded");
+    if (typeof window === "undefined") return;
+
+    let hasLoaded = null;
+    try {
+      hasLoaded = sessionStorage.getItem("portfolio-loaded");
+    } catch (e) {
+      console.error("SessionStorage not available", e);
+    }
 
     if (hasLoaded) {
       setLoading(false);
@@ -46,7 +53,9 @@ export default function Home() {
     // Premier chargement de la session
     const timer = setTimeout(() => {
       setLoading(false);
-      sessionStorage.setItem("portfolio-loaded", "true");
+      try {
+        sessionStorage.setItem("portfolio-loaded", "true");
+      } catch (e) { }
     }, 3000);
 
     return () => clearTimeout(timer);

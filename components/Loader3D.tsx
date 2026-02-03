@@ -51,8 +51,10 @@ const quotes = [
 export default function Loader3D() {
     const [progress, setProgress] = useState(0);
     const [quoteIndex, setQuoteIndex] = useState(0);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const progressInterval = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {
@@ -72,6 +74,8 @@ export default function Loader3D() {
             clearInterval(quoteInterval);
         };
     }, []);
+
+    if (!mounted) return null;
 
     return (
         <motion.div

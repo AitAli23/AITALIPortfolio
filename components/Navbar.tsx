@@ -46,7 +46,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${!mounted ? "bg-white dark:bg-black py-4" : scrolled
         ? "bg-white/90 dark:bg-black/90 backdrop-blur-lg shadow-lg py-2"
         : "bg-white/80 dark:bg-black/80 backdrop-blur-md py-4"
         }`}

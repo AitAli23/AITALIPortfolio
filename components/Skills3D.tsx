@@ -202,6 +202,12 @@ const SkillCard = ({ skill }: { skill: typeof skillsData[0] }) => {
 
 export default function Skills3D() {
     const [activeTab, setActiveTab] = useState("All");
+    const [mounted, setMounted] = useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
     const categories = ["All", "Language", "Framework", "AI", "Data", "Tool"];
 
     const filteredSkills = activeTab === "All"
@@ -213,12 +219,14 @@ export default function Skills3D() {
 
             {/* 3D Background */}
             <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
-                <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 15], fov: 45 }}>
-                    <ambientLight intensity={0.5} />
-                    <pointLight position={[10, 10, 10]} intensity={1} />
-                    <Scene />
-                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
-                </Canvas>
+                {mounted && (
+                    <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 15], fov: 45 }}>
+                        <ambientLight intensity={0.5} />
+                        <pointLight position={[10, 10, 10]} intensity={1} />
+                        <Scene />
+                        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
+                    </Canvas>
+                )}
             </div>
 
             {/* Content */}
