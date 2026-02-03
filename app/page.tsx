@@ -117,7 +117,7 @@ export default function Home() {
                   Me contacter
                 </motion.a>
                 <motion.a
-                  href="/CV_AITALIMarouane.pdf"
+                  href="/MarwanCV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3 border-2 border-gray-300 dark:border-gray-700 rounded-full font-medium hover:border-blue-500 transition-colors cursor-pointer"
@@ -134,7 +134,7 @@ export default function Home() {
                 className="flex gap-4 justify-center md:justify-start pt-4"
               >
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/AitAli23"
                   target="_blank"
                   className="p-3 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -142,7 +142,7 @@ export default function Home() {
                   <Github className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/marouane-ait-ali-b34b65293"
                   target="_blank"
                   className="p-3 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                   whileHover={{ scale: 1.1, rotate: -5 }}
@@ -150,7 +150,7 @@ export default function Home() {
                   <Linkedin className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="mailto:contact@exemple.com"
+                  href="mailto:aitalimarouane@ump.ac.ma"
                   className="p-3 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
@@ -251,7 +251,7 @@ export default function Home() {
               className="flex justify-center gap-6"
             >
               <motion.a
-                href="mailto:contact@exemple.com"
+                href="mailto:aitalimarouane@ump.ac.ma"
                 variants={staggerItem}
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.95 }}
@@ -260,7 +260,7 @@ export default function Home() {
                 <Mail className="w-8 h-8" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/marouane-ait-ali-b34b65293"
                 target="_blank"
                 variants={staggerItem}
                 whileHover={{ scale: 1.1, y: -5 }}
@@ -270,7 +270,7 @@ export default function Home() {
                 <Linkedin className="w-8 h-8" />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/AitAli23"
                 target="_blank"
                 variants={staggerItem}
                 whileHover={{ scale: 1.1, y: -5 }}

@@ -11,17 +11,17 @@ export default function ContactPage() {
         <p>
           <span className="font-medium">Email :</span>{" "}
           <a
-            href="mailto:marouane@example.com"
+            href="mailto:aitalimarouane@ump.ac.ma"
             className="text-blue-600 hover:underline"
           >
-            marouane@example.com
+            aitalimarouane@ump.ac.ma
           </a>
         </p>
 
         <p>
           <span className="font-medium">LinkedIn :</span>{" "}
           <a
-            href="https://www.linkedin.com/in/marouane-ait-ali/"
+            href="https://www.linkedin.com/in/marouane-ait-ali-b34b65293"
             target="_blank"
             className="text-blue-600 hover:underline"
           >
@@ -32,11 +32,11 @@ export default function ContactPage() {
         <p>
           <span className="font-medium">GitHub :</span>{" "}
           <a
-            href="https://github.com/marouaneaitali"
+            href="https://github.com/AitAli23"
             target="_blank"
             className="text-blue-600 hover:underline"
           >
-            github.com/marouaneaitali
+            github.com/AitAli23
           </a>
         </p>
       </div>
