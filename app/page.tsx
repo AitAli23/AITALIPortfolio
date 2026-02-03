@@ -126,7 +126,7 @@ export default function Home() {
                   Me contacter
                 </motion.a>
                 <motion.a
-                  href="/MarwanCV.pdf"
+                  href="/AITALI_Marouane_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3 border-2 border-gray-300 dark:border-gray-700 rounded-full font-medium hover:border-blue-500 transition-colors cursor-pointer"
