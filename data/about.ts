@@ -1,5 +1,5 @@
 export const about = {
-  name: "AIT ALI Marouane",
+  name: "Marouane AIT ALI",
   role: "Étudiant en Génie Informatique / Développeur",
   description: `
     Je suis passionné par le développement web, mobile et l’Intelligence Artificielle.
