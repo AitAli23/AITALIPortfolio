@@ -77,10 +77,18 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
                             </span>
                         ))}
                     </div>
+
+                    {/* Mobile Button - Always visible on mobile */}
+                    <Link
+                        href={`/projects/${project.id}`}
+                        className="mt-6 flex md:hidden items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors"
+                    >
+                        Voir le projet <ArrowUpRight className="w-4 h-4" />
+                    </Link>
                 </div>
 
-                {/* Hover Action Overlay */}
-                <div className="absolute inset-0 bg-blue-600/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40 rounded-[2rem]">
+                {/* Hover Action Overlay - Desktop only */}
+                <div className="hidden md:flex absolute inset-0 bg-blue-600/90 backdrop-blur-sm items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40 rounded-[2rem]">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex flex-col items-center gap-4 text-white">
                         <h4 className="text-xl font-bold px-6 text-center">{project.title}</h4>
                         <p className="px-8 text-center text-sm text-blue-100 line-clamp-3 mb-2">

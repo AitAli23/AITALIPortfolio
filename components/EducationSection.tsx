@@ -45,11 +45,10 @@ export default function EducationSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.7, delay: index * 0.2 }}
-                                className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""
-                                    }`}
+                                className="flex flex-col md:flex-row gap-8 items-center"
                             >
-                                {/* Content Card */}
-                                <div className="flex-1 w-full">
+                                {/* Content Card - Always first on mobile, alternates on desktop */}
+                                <div className={`flex-1 w-full ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
                                     <div className="relative group">
                                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
                                         <div className="relative bg-white dark:bg-zinc-900 p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-1">
@@ -72,13 +71,13 @@ export default function EducationSection() {
                                     </div>
                                 </div>
 
-                                {/* Center Point */}
-                                <div className="relative z-10 flex-shrink-0 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-900 border-4 border-blue-100 dark:border-blue-900/30 shadow-lg">
+                                {/* Center Point - Desktop only */}
+                                <div className="relative z-10 flex-shrink-0 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-900 border-4 border-blue-100 dark:border-blue-900/30 shadow-lg order-2">
                                     <div className="w-4 h-4 rounded-full bg-blue-600 animate-pulse" />
                                 </div>
 
-                                {/* Logo Card */}
-                                <div className={`flex-1 w-full flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                                {/* Logo Card - Always second on mobile, alternates on desktop */}
+                                <div className={`flex-1 w-full flex justify-center ${index % 2 === 0 ? "md:order-1 md:justify-start" : "md:order-3 md:justify-end"}`}>
                                     <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-white dark:bg-zinc-800/50 backdrop-blur-sm border border-zinc-200 dark:border-zinc-700 shadow-2xl flex items-center justify-center group overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110">
