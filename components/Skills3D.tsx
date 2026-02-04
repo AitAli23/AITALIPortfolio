@@ -223,8 +223,10 @@ export default function Skills3D() {
                     <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 15], fov: 45 }}>
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} intensity={1} />
-                        <Scene />
-                        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
+                        <Suspense fallback={null}>
+                            <Scene />
+                            <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
+                        </Suspense>
                     </Canvas>
                 )}
             </div>
