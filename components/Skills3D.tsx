@@ -145,8 +145,9 @@ const FilterTabs = ({ activeTab, setActiveTab, categories }: { activeTab: string
                 <button
                     key={cat}
                     onClick={() => setActiveTab(cat)}
-                    className={`relative px-6 py-2 rounded-full text-sm font-medium transition-colors z-10 ${activeTab === cat ? "text-white" : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
+                    className={`relative px-6 py-2 rounded-full text-sm font-medium transition-colors z-10 notranslate ${activeTab === cat ? "text-white" : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200"
                         }`}
+                    translate="no"
                 >
                     {activeTab === cat && (
                         <motion.div
