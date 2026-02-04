@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text, Float, MeshDistortMaterial, Sphere, PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
@@ -172,7 +172,8 @@ const SkillCard = ({ skill }: { skill: typeof skillsData[0] }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
-            className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-800/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 cursor-default overflow-hidden"
+            className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-800/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 cursor-default overflow-hidden notranslate"
+            translate="no"
         >
             {/* Background Gradient on Hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
