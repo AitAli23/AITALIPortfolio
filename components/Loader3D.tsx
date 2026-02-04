@@ -96,7 +96,7 @@ export default function Loader3D() {
             className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-zinc-950"
         >
             <div className="w-full h-1/2 relative">
-                <Canvas>
+                <Canvas dpr={[1, 1.5]}>
                     <PerspectiveCamera makeDefault position={[0, 0, 8]} />
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} intensity={1.5} />

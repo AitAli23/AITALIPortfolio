@@ -26,9 +26,15 @@ import {
   buttonTap
 } from "../lib/animations";
 import TypewriterText from "../components/TypewriterText";
-import Loader3D from "../components/Loader3D";
+// import Loader3D from "../components/Loader3D";
+import LoadingFallback from "../components/LoadingFallback";
 import { AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+
+const Loader3D = dynamic(() => import("../components/Loader3D"), {
+  ssr: false,
+  loading: () => <LoadingFallback />,
+});
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
