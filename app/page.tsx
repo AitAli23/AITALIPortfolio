@@ -2,10 +2,12 @@
 
 import Navbar from "../components/Navbar";
 import HeroPhoto from "../components/HeroPhoto";
+import dynamic from "next/dynamic";
 import HeroBackground3D from "../components/HeroBackground3D";
-import ProjectBackground3D from "../components/ProjectBackground3D";
-import ContactBackground3D from "../components/ContactBackground3D";
-import Skills3D from "../components/Skills3D";
+
+const ProjectBackground3D = dynamic(() => import("../components/ProjectBackground3D"), { ssr: false });
+const ContactBackground3D = dynamic(() => import("../components/ContactBackground3D"), { ssr: false });
+const Skills3D = dynamic(() => import("../components/Skills3D"), { ssr: false });
 import ProjectCard from "../components/ProjectCard";
 import AboutSection from "../components/AboutSection";
 import EducationSection from "../components/EducationSection";

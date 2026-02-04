@@ -2,9 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { about } from "@/data/about";
 import { Code2, Cpu, Globe, Sparkles } from "lucide-react";
-import AboutBackground3D from "./AboutBackground3D";
+
+const AboutBackground3D = dynamic(() => import("./AboutBackground3D"), { ssr: false });
 import Counter from "./Counter";
 
 export default function AboutSection() {

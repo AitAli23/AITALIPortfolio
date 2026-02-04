@@ -52,7 +52,7 @@ export default function AboutBackground3D() {
 
     return (
         <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
-            <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
+            <Canvas camera={{ position: [0, 0, 10], fov: 60 }} dpr={[1, 1.5]}>
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} intensity={1} />
                 <FloatingObjects isDark={isDark} />

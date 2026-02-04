@@ -108,7 +108,7 @@ export default function HeroBackground3D() {
 
     return (
         <div className="absolute inset-0 z-0 pointer-events-none">
-            <Canvas camera={{ position: [0, 0, 12], fov: 70 }}>
+            <Canvas camera={{ position: [0, 0, 12], fov: 70 }} dpr={[1, 1.5]}>
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} intensity={1} />
                 <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8b5cf6" />
