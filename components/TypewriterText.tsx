@@ -54,7 +54,7 @@ export default function TypewriterText({
     }, [displayedText, isDeleting, loopNum, textArray, isInView]);
 
     return (
-        <span ref={ref} className={className}>
+        <span ref={ref} className={`${className} notranslate`} translate="no">
             {displayedText}
             <motion.span
                 animate={{ opacity: [1, 0] }}
